@@ -1,26 +1,18 @@
 ---
-import { getCollection } from "astro:content";
 import PageLayout from "@/layouts/Base";
-import PostPreview from "@/components/blog/PostPreview";
 import SocialList from "@/components/SocialList";
-import { sortMDByDate } from "@/utils";
-
-const MAX_POSTS = 10;
-const allPosts = await getCollection("post");
-const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 ---
 
 <PageLayout meta={{ title: "Home" }}>
 	<section>
-		<h1 class="title mb-6">Hello World!</h1>
+		<h1 class="title mb-6">Welcome!</h1>
 		<p class="mb-4">
-			Hi, I’m a theme for Astro, an example of how you can use this starter to create a personal
-			blog. If you want to know more about how you can customise me, add more posts, and make it
-			your own, click on one the github icon link below which will take you to my repo.
+			Hi, I’m Sabir Khan. an 20 y/o highly curious internet craftsman optimizing for fun. enjoying
+			development & blockchain. building beautiful experiences.
 		</p>
 		<SocialList />
 	</section>
-	<section aria-label="Blog post list" class="mt-16">
+	<!-- <section aria-label="Blog post list" class="mt-16">
 		<h2 class="title mb-4 text-xl">Posts</h2>
 		<ul class="space-y-4 sm:space-y-2">
 			{
@@ -31,30 +23,30 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 				))
 			}
 		</ul>
-	</section>
+	</section> -->
 	<section class="mt-16">
-		<h2 class="title mb-4 text-xl">Technologies</h2>
+		<h2 class="title mb-4 text-xl">Tech Stack</h2>
 		<ul class="space-y-4 sm:space-y-2">
 			<li>
 				<a
-					href="https://astro.build"
+					href="https://react.dev/"
 					target="_blank"
 					rel="noopener noreferrer"
 					class="cactus-link inline-block"
-					>Astro
+					>React JS
 				</a>:
-				<p class="inline-block sm:mt-2">Build fast websites, faster.</p>
+				<p class="inline-block sm:mt-2">Create dynamic user interfaces with ease and speed.</p>
 			</li>
 			<li>
 				<a
-					href="https://docs.astro.build/en/guides/integrations-guide/image/"
+					href=" https://nextjs.org/docs"
 					target="_blank"
 					rel="noopener noreferrer"
 					class="cactus-link inline-block"
-					>@astro/image
+					>Next JS
 				</a>:
 				<p class="inline-block sm:mt-2">
-					An Astro integration for optimising images in Astro projects.
+					React-based framework for server-rendered React applications.
 				</p>
 			</li>
 			<li>
@@ -71,33 +63,153 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 			</li>
 			<li>
 				<a
-					href="https://www.markdownguide.org/"
+					href=" https://redux.js.org/"
 					target="_blank"
 					rel="noopener noreferrer"
 					class="cactus-link inline-block"
-					>Markdown
+					>Redux
 				</a>:
-				<p class="inline-block sm:mt-2">Simple and easy-to-use markup language.</p>
+				<p class="inline-block sm:mt-2">
+					Simplify the management of state, the predictable state container library.
+				</p>
 			</li>
 			<li>
 				<a
-					href="https://mdxjs.com/"
+					href=" https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference"
 					target="_blank"
 					rel="noopener noreferrer"
 					class="cactus-link inline-block"
-					>MDX
+					>JavaScript
 				</a>:
-				<p class="inline-block sm:mt-2">Markdown for the component era.</p>
+				<p class="inline-block sm:mt-2">
+					The versatile and widely-used programming language of the web.
+				</p>
 			</li>
 			<li>
 				<a
-					href="https://github.com/vercel/satori"
+					href=" https://www.typescriptlang.org/docs/"
 					target="_blank"
 					rel="noopener noreferrer"
 					class="cactus-link inline-block"
-					>Satori
+					>TypeScript
 				</a>:
-				<p class="inline-block sm:mt-2">Generating png Open Graph images for blog posts</p>
+				<p class="inline-block sm:mt-2">
+					The strongly-typed superset of JavaScript that adds optional static typing.
+				</p>
+			</li>
+			<li>
+				<a
+					href=" https://nodejs.org/en/docs/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="cactus-link inline-block"
+					>Node JS
+				</a>:
+				<p class="inline-block sm:mt-2">The server-side JavaScript runtime.</p>
+			</li>
+			<li>
+				<a
+					href="https://nestjs.com/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="cactus-link inline-block"
+					>Nest JS
+				</a>:
+				<p class="inline-block sm:mt-2">Elegant Node.js framework.</p>
+			</li>
+			<li>
+				<a
+					href=" https://expressjs.com/en/api.html"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="cactus-link inline-block"
+					>Express JS
+				</a>:
+				<p class="inline-block sm:mt-2">
+					The minimalist and unopinionated Node.js framework for web development.
+				</p>
+			</li>
+			<li>
+				<a
+					href=" https://docs.mongodb.com/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="cactus-link inline-block"
+					>MongoDB
+				</a>:
+				<p class="inline-block sm:mt-2">
+					The NoSQL document-oriented database that offers flexibility.
+				</p>
+			</li>
+			<li>
+				<a
+					href="https://recoiljs.org/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="cactus-link inline-block"
+					>Recoil
+				</a>:
+				<p class="inline-block sm:mt-2">
+					A lightweight, efficient state management library for React.
+				</p>
+			</li>
+			<li>
+				<a
+					href="https://www.anchor-lang.com/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="cactus-link inline-block"
+					>Anchor Lang
+				</a>:
+				<p class="inline-block sm:mt-2">Framework for Solana's Sealevel runtime</p>
+			</li>
+			<li>
+				<a
+					href="https://solana-labs.github.io/solana-web3.js/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="cactus-link inline-block"
+					>Web3 JS
+				</a>:
+				<p class="inline-block sm:mt-2">
+					The JavaScript library for interacting with the Solana blockchain
+				</p>
+			</li>
+			<li>
+				<a
+					href="https://www.rust-lang.org/learn"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="cactus-link inline-block"
+					>Rust
+				</a>:
+				<p class="inline-block sm:mt-2">
+					The modern systems programming language designed for performance.
+				</p>
+			</li>
+			<li>
+				<a
+					href="https://devdocs.io/cpp/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="cactus-link inline-block"
+					>C/C++
+				</a>:
+				<p class="inline-block sm:mt-2">
+					The powerful and widely-used programming languages for system programming
+				</p>
+			</li>
+			<li>
+				<a
+					href="https://www.java.com/en/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="cactus-link inline-block"
+					>Java
+				</a>:
+				<p class="inline-block sm:mt-2">
+					The popular language that offers cross-platform compatibility
+				</p>
 			</li>
 		</ul>
 	</section>
