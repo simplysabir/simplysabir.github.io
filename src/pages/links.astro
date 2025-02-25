@@ -1,0 +1,95 @@
+---
+import PageLayout from "@/layouts/Base";
+import { SOCIAL_LINKS } from "@/data/constants";
+import profileImg from "../assets/profile.jpg";
+import { Image } from "@astrojs/image/components";
+
+const meta = {
+	title: "Links",
+	description: "Connect with Sabir Khan across the web",
+};
+
+// Define links with titles, URLs, and custom classes
+const links = [
+	{
+		title: "Portfolio",
+		url: "/",
+		class: "bg-[--theme-accent] text-white hover:opacity-90"
+	},
+	{
+		title: "Github",
+		url: SOCIAL_LINKS.github,
+		class: "bg-gray-800 text-white hover:opacity-90"
+	},
+	{
+		title: "Blog",
+		url: SOCIAL_LINKS.blog,
+		class: "bg-blue-600 text-white hover:opacity-90"
+	},
+	{
+		title: "Twitter",
+		url: SOCIAL_LINKS.twitter,
+		class: "bg-sky-500 text-white hover:opacity-90"
+	},
+	{
+		title: "LinkedIn",
+		url: SOCIAL_LINKS.linkedin,
+		class: "bg-blue-700 text-white hover:opacity-90"
+	},
+	{
+		title: "Instagram",
+		url: SOCIAL_LINKS.instagram,
+		class: "bg-gradient-to-r from-pink-500 via-purple-500 to-orange-500 text-white hover:opacity-90"
+	},
+	{
+		title: "Email",
+		url: `mailto:${SOCIAL_LINKS.email}`,
+		class: "bg-[--theme-link] text-white hover:opacity-90"
+	},
+];
+---
+
+<PageLayout meta={meta}>
+	<div class="flex flex-col items-center justify-center">
+		<!-- Profile Image -->
+		<div class="mb-6 flex justify-center">
+			<div class="h-32 w-32 overflow-hidden rounded-full border-2 border-[--theme-accent]">
+				<Image 
+					src={profileImg} 
+					alt="Sabir Khan" 
+					class="h-full w-full object-cover"
+				/>
+			</div>
+		</div>
+
+		<!-- Name and Location -->
+		<h1 class="mb-2 text-center text-2xl font-bold">Sabir Khan</h1>
+		
+		<div class="mb-4 flex items-center text-sm text-gray-600 dark:text-gray-400">
+			<svg xmlns="http://www.w3.org/2000/svg" class="mr-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+			</svg>
+			<span>Mumbai, India</span>
+		</div>
+
+		<!-- Bio -->
+		<p class="mb-8 max-w-md text-center">
+			22 y/o digital nomad slinging code across full-stack, web3 & DevOps // mumbai-based // member @SuperteamDAO
+		</p>
+
+		<!-- Links -->
+		<div class="flex w-full max-w-md flex-col space-y-4">
+			{links.map(link => (
+				<a 
+					href={link.url} 
+					target={link.url.startsWith("/") ? "_self" : "_blank"} 
+					rel={link.url.startsWith("/") ? "" : "noopener noreferrer"}
+					class={`flex items-center justify-center rounded-md py-3 px-4 font-medium transition-all duration-300 ${link.class}`}
+				>
+					{link.title}
+				</a>
+			))}
+		</div>
+	</div>
+</PageLayout>
