@@ -24,6 +24,6 @@ export const SOCIAL_LINKS = {
 	discord: "https://discordapp.com/users/simplysabir#8443",
 	email: "simplysabir@gmail.com",
 	linkedin: "https://linkedin.com/in/simplysabir/",
-	blog: "https://blog.simplysabir.xyz",
+	blog: "https://blogs.simplysabir.xyz",
 	instagram: "https://instagram.com/simplysabir",
 };
